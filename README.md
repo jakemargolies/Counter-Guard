@@ -93,7 +93,7 @@ The bluetooth module allows for the device and the user's phone to communicate w
 
 ## Block Wiring Diagram 
 
-![image of sprayer](/images/Block Diagram.png "Wiring Diagram")
+![image of sprayer](/images/Block%20Diagram.png "Wiring Diagram")
 
 
 
