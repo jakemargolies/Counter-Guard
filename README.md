@@ -95,5 +95,9 @@ The bluetooth module allows for the device and the user's phone to communicate w
 
 ![image of sprayer](/images/Block%20Diagram.png "Wiring Diagram")
 
+As can be seen there is a bit of extra circuitry added to control the trigger mechanism. To trigger the sprayer programmatically, the two contacts of the trigger button are placed on the collector and emitter of a basic NPN transistor and activated through a 1kΩ resistor driven by a DigitalOut pin on the mbed. 
 
+# Software Design
+
+## Block Diagram of States and Functions
 
