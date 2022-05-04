@@ -45,6 +45,34 @@ To create this system the following components are required:
 
 ![image of sprayer](/images/sprayer.jpg "Electric Plant Mister")
 
-### Teardown Photos
+### Inside the Sprayer
 
 ![image of sprayer](/images/disassembled.jpg "Electric Plant Mister")
+
+Inside the sprayer there are 3 boards, a rechargeable battery, and a DC motor pump with inlet and outlet tubing.
+
+### Main PCB
+
+![image of sprayer](/images/main_sprayer_board.jpg "Main Board")
+
+The main PCB has connections to the other boards, a microcontroller that governs the behavior of the device, some passive elements including four battery indicator LEDs, and a slide connector for the battery which feeds into a voltage regulator. The lowest of these battery indicator LEDs will be used as an input to the Mbed to determine when the battery has been depleted (when the LED turns off).
+
+### Main PCB Reverse Side
+
+![image of sprayer](/images/board_backside.jpg "Reverse of Main PCB")
+
+On the back of the main board we can see another slide connector providing DC power to the pump. There is also a 5V connection for the charging port and two connections to something called "key".
+
+### Button/Trigger
+
+![image of sprayer](/images/trigger.jpg "Sprayer trigger")
+
+Here is the board connected to the board on the pads labelled "key". It is a SPST button that established continuity between the two leads coming off of it. Here you can see that I have soldered two additional jumper cables so that the trigger can be activated programmatically using the Mbed. This is the integral interaction point with the rest of the system.
+
+### Battery
+
+![image of sprayer](/images/battery.jpg "Sprayer Battery")
+
+This is the rechargeable battery that comes inside the sprayer. Oddly enough, it is 3.7V. I opted to reuse all of the internal components from the sprayer in my design, but a potential option would be using a buck converter or voltage regulator to step up the 3.3V provided by the Mbed to match the 3.7V the main board needs in order to avoid using this battery, but for me it was more convenient to leave it in since I needed supplemental power anyway.
+
+# 
