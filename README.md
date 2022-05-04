@@ -44,3 +44,7 @@ To create this system the following components are required:
 ## Modifying the Electric Sprayer
 
 ![image of sprayer](/images/sprayer.jpg "Electric Plant Mister")
+
+### Teardown Photos
+
+![image of sprayer](/images/disassembled.jpg "Electric Plant Mister")
