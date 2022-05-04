@@ -31,7 +31,9 @@ The proposed design combines ideas from existing projects with knowledge acquire
 
 The solution works by using a motion sensor to detect the presence of a moving object on the countertop, and spraying water at the object (cat) when the system is "armed". When the user plans on entering the kitchen, they use the interface provided on their phone to disarm the device via bluetooth. Once disarmed, the user receives a message that the system is disabled, and the screen on the device indicates that it is safe to approach. Because the system power is supplemented with a rechargeable battery used to power the sprayer pump, the device cannot be armed if the battery is too low. The user will receive a message on their phone which tells them the system cannot be armed until properly charged. As soon as the battery is charged, the user receives a message that the device is once again armable.
 
-# Parts
+# Hardware Design
+
+## Parts List
 
 To create this system the following components are required:
   1. Mbed - LPC1768
@@ -67,7 +69,9 @@ On the back of the main board we can see another slide connector providing DC po
 
 ![image of sprayer](/images/trigger.jpg "Sprayer trigger")
 
-Here is the board connected to the board on the pads labelled "key". It is a SPST button that established continuity between the two leads coming off of it. Here you can see that I have soldered two additional jumper cables so that the trigger can be activated programmatically using the Mbed. This is the integral interaction point with the rest of the system.
+Here is the board connected to the board on the pads labelled "key". It is a SPST button that established continuity between the two leads coming off of it. Here you can see that I have soldered two additional jumper cables so that the trigger can be activated programmatically using the Mbed. This is the integral interaction point with the rest of the system. The trigger works in an unintuitive way, as depicted below, so the code must go through a specific sequence of button presses and holds to get the sprayer to perform a short burst and then power off. 
+
+![image of sprayer](/images/button_usage.png "Instructions")
 
 ### Battery
 
@@ -75,4 +79,12 @@ Here is the board connected to the board on the pads labelled "key". It is a SPS
 
 This is the rechargeable battery that comes inside the sprayer. Oddly enough, it is 3.7V. I opted to reuse all of the internal components from the sprayer in my design, but a potential option would be using a buck converter or voltage regulator to step up the 3.3V provided by the Mbed to match the 3.7V the main board needs in order to avoid using this battery, but for me it was more convenient to leave it in since I needed supplemental power anyway.
 
-# 
+## Display
+
+While the two user visible device states could be represented with LEDs, I find that the mini LCD makes the device more enjoyable to use and provides good room for expanding user output without needing additional hardware. A future design with more complex functionality could have a navigable menu, status messages, and error codes displayed. 
+
+## Motion Detector
+
+Like many similar projects, I opted to use a PIR motion detector for sensing movement in the general vicinity in front of the device. 
+
+
