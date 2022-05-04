@@ -31,7 +31,7 @@ The proposed design combines ideas from existing projects with knowledge acquire
 
 The solution works by using a motion sensor to detect the presence of a moving object on the countertop, and spraying water at the object (cat) when the system is "armed". When the user plans on entering the kitchen, they use the interface provided on their phone to disarm the device via bluetooth. Once disarmed, the user receives a message that the system is disabled, and the screen on the device indicates that it is safe to approach. Because the system power is supplemented with a rechargeable battery used to power the sprayer pump, the device cannot be armed if the battery is too low. The user will receive a message on their phone which tells them the system cannot be armed until properly charged. As soon as the battery is charged, the user receives a message that the device is once again armable.
 
-# Parts List
+# Parts
 
 To create this system the following components are required:
   1. Mbed - LPC1768
@@ -43,4 +43,4 @@ To create this system the following components are required:
 
 ## Modifying the Electric Sprayer
 
-![The San Juan Mountains are beautiful!](/images/san-juan-mountains.jpg "San Juan Mountains")
+![image of sprayer](/images/sprayer.jpg "Electric Plant Mister")
