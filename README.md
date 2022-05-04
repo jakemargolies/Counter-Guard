@@ -42,3 +42,4 @@ To create this system the following components are required:
 
 ## Modifying the Electric Sprayer
 
+![The San Juan Mountains are beautiful!](/images/san-juan-mountains.jpg "San Juan Mountains")
