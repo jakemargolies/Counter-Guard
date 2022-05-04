@@ -93,7 +93,7 @@ The bluetooth module allows for the device and the user's phone to communicate w
 
 ## Block Wiring Diagram 
 
-![image of sprayer](/images/Block%20Diagram.png "Wiring Diagram")
+![Wiring Diagram](/images/Block%20Diagram.png "Wiring Diagram")
 
 As can be seen there is a bit of extra circuitry added to control the trigger mechanism. To trigger the sprayer programmatically, the two contacts of the trigger button are placed on the collector and emitter of a basic NPN transistor and activated through a 1kΩ resistor driven by a DigitalOut pin on the mbed. 
 
@@ -101,3 +101,12 @@ As can be seen there is a bit of extra circuitry added to control the trigger me
 
 ## Block Diagram of States and Functions
 
+![State Diagram](/images/Drawing.png "State Machine")
+
+There are a few things not included in the diagram shown here. 
+  1. The "armable" flag is set to true and false by an interrupt routine triggered by the lowest battery indicator LED. If the light goes out, the device can no longer be armed, because there is no power to the motor from the battery. If the light comes on, the device becomes armable again as the battery has charge. 
+  2. There is an interrupt routine that is triggered by user input on the bluetooth serial port. It parses the input and sets the "button_ready" flag so the main function knows to check for user input and change state accordingly. This is how the arm() and disarm() functions are called.
+
+# Prototype Demonstration
+
+https://youtu.be/aVsBjvqTC80
