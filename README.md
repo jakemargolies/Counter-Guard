@@ -85,6 +85,15 @@ While the two user visible device states could be represented with LEDs, I find 
 
 ## Motion Detector
 
-Like many similar projects, I opted to use a PIR motion detector for sensing movement in the general vicinity in front of the device. 
+Like many similar projects, I opted to use a PIR motion detector for sensing movement in the general vicinity in front of the device. The original design of this project (which the TA's predicted was too ambitious) involved using computer vision on a Raspberry Pi to classify the object as a cat or not a cat. Then the sprayer would track the cat through space and aim at the cat while spraying. This is outside of my current knowledge and abilities but could be added on later when I learn how to work with computer vision. 
+
+## Bluetooth Module
+
+The bluetooth module allows for the device and the user's phone to communicate with each other, enabling control of the devices state as well as feedback from the device to the user about the status of the device. 
+
+## Block Wiring Diagram 
+
+![image](https://user-images.githubusercontent.com/20327606/166804523-ff31f469-3e0b-4138-b4db-853183220126.png)
+
 
 
