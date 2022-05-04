@@ -1,6 +1,7 @@
 # Counter-Guard
 
 An automatic cat sprayer for kitchen counters
+
 **Project Author: Jacob Margolies**
 
 # Problem Background
